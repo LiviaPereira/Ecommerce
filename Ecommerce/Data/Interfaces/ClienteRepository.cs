@@ -48,9 +48,8 @@ namespace Ecommerce.Data.Interfaces
         public void UpdateCliente(Cliente cliente)
         {
             context.Entry(cliente).State = EntityState.Modified;
-        }
-
-        
+            context.SaveChanges();
+        }        
 
         public void Save()
         {
