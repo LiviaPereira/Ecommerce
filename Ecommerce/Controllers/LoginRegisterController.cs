@@ -118,5 +118,10 @@ namespace Ecommerce.Controllers
             return Redirect("/Home/Index");
         }
 
+        public async Task<IActionResult> InativarCliente()
+        {
+            return View();
+        }
+
     }
 }
