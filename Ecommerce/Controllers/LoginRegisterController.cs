@@ -57,7 +57,7 @@ namespace Ecommerce.Controllers
                     c.CEP = register.CEP;
                     c.Email = register.Email;
                     c.Senha = register.Senha;
-
+                    c.Ativo = true;
 
                     _clienteRepository.InsertCliente(c);
 
@@ -80,12 +80,13 @@ namespace Ecommerce.Controllers
         {
             var result = _clienteRepository.GetClienteByEmail(usuario.Email, usuario.Senha);
 
-            if (result != null)
+            if (result != null && result.Ativo == true)
             {
                 var claims = new List<Claim>
                 {
                 new Claim(ClaimTypes.Email, result.Email),
                 new Claim(ClaimTypes.Name, result.Nome),
+                new Claim(ClaimTypes.NameIdentifier, result.IdCliente.ToString())
                 //new Claim(ClaimTypes.Role, "Administrator"),
                 };
 
@@ -118,10 +119,7 @@ namespace Ecommerce.Controllers
             return Redirect("/Home/Index");
         }
 
-        public async Task<IActionResult> InativarCliente()
-        {
-            return View();
-        }
+       
 
     }
 }

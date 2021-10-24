@@ -31,7 +31,7 @@ namespace Ecommerce.Controllers
             var list = _context.Produto.FromSqlRaw<Produto>(sql).ToList();
             Debugger.Break();
             return View(list);
-
+            
 
 
         }
