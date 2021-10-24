@@ -1,0 +1,74 @@
+﻿@model Register
+    <!-- Breadcrumb Start -->
+<div class="breadcrumb-wrap">
+    <div class="container-fluid">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Products</a></li>
+            <li class="breadcrumb-item active">Login & Register</li>
+        </ul>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+<!-- Login Start -->
+<div class="login">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="register-form">
+                    <form asp-action="Register" asp-controller="LoginRegister" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label asp-for="Nome">Nome Completo</label>
+                                <input asp-for="Nome" class="form-control" type="text" placeholder="Maria Joaquina">
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Telefone">Telefone</label>
+                                <input asp-for="Telefone" class="form-control" type="text" placeholder="(99)999999999">
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Endereco">Endereço</label>
+                                <input asp-for="Endereco" class="form-control" type="text" placeholder="Rua das Flores">
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="EnderecoNumero">Número</label>
+                                <input asp-for="EnderecoNumero" class="form-control" type="text" placeholder="999">
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="EnderecoComplemento">Complemento</label>
+                                <input asp-for="EnderecoComplemento" class="form-control" type="text" placeholder="Bloco X">
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Bairro">Bairro</label>
+                                <input asp-for="Bairro" class="form-control" type="text" placeholder="Vila das Rosas">
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Cidade">Cidade</label>
+                                <input asp-for="Cidade" class="form-control" type="text" placeholder="São José">
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="UF">UF</label>
+                                <input asp-for="UF" class="form-control" type="text" placeholder="XX">
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="CEP">CEP</label>
+                                <input asp-for="CEP" class="form-control" type="text" placeholder="XX">
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Email">Email</label>
+                                <input asp-for="Email" class="form-control" type="email" placeholder="XX">
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Senha">Senha</label>
+                                <input asp-for="Senha" class="form-control" type="password" placeholder="XX">
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" onclick="submit_Click" class="btn">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
