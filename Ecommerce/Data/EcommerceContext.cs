@@ -15,5 +15,6 @@ namespace Ecommerce.Data
         }
         public DbSet<Cliente> Cliente { get; set; } 
         public DbSet<Ecommerce.Models.Produto> Produto { get; set; } 
+        public DbSet<Ecommerce.Models.MyAccount> MyAccounts { get; set; }
     }
 }
